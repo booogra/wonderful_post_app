@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @sample_article.title %>
+</p>
+
+<p>
+  <strong>Context:</strong>
+  <%= @sample_article.context %>
+</p>
+
+<%= link_to 'Edit', edit_sample_article_path(@sample_article) %> |
+<%= link_to 'Back', sample_articles_path %>
