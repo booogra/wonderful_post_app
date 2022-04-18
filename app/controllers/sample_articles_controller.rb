@@ -3,7 +3,6 @@ class SampleArticlesController < ApplicationController
 
   # GET /sample_articles or /sample_articles.json
   def index
-    binding.pry
     @sample_articles = SampleArticle.all
   end
 
