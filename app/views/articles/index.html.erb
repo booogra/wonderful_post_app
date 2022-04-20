@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>記事</h1>
+<h1>記事の一覧</h1>
 
 <table>
   <thead>
@@ -18,7 +18,7 @@
         <td><%= article.content %></td>
         <td><%= link_to '詳細', article %></td>
         <td><%= link_to '編集', edit_article_path(article) %></td>
-        <td><%= link_to '削除', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '削除', article, method: :delete, data: { confirm: '記事を削除しますか?' } %></td>
       </tr>
     <% end %>
   </tbody>
