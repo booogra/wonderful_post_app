@@ -8,5 +8,10 @@
     <%= @article.content %>
   </div>
 </div>
-<%= link_to '編集', edit_article_path(@article), class: "btn btn-warning" %>
+
 <%= link_to '一覧', articles_path, class: "btn btn-secondary" %>
+
+<% if @article.user_id == current_user.id %>
+  <%= link_to '編集', edit_article_path(@article), class: "btn btn-warning" %>
+  <%= link_to '削除', @article, class: "btn btn-danger", method: :delete, data: { confirm: '削除します' }%>
+<% end %>
